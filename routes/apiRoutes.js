@@ -1,4 +1,6 @@
 const Workout = require("../models/workout.js");
+const mongoose = require("mongoose");
+
 module.exports = function(app){
     app.get("/api/workouts",(req,res)=>{
         Workout.find({}).then(data=>{
