@@ -14,9 +14,11 @@ The Fitness Tracker allows you to view create and track daily workouts.
 
 
 ## Usage
-Deployed website:
-Thumbnail:
+https://enigmatic-tor-10932.herokuapp.com/
+
 create and track your daily workouts and also log multiple exercises in a workout on a given day. The app makes it easy to track the name, type, weight, sets, reps, and duration of each exercise. Additionally, the app helps to track the distance traveledfor cardio workouts.
+
+Thumbnail:
 
 ## Technology
 
