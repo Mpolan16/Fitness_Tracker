@@ -8,13 +8,16 @@ module.exports = function(app){
         });
     });
     app.put("/api/workouts/:id",(req,res)=>{
-        Workout.update({_id:mongoose.Types.ObjectId(req.params.id)},{$push:{exercises:req.body}},(err, data)=>{
-            if(err){
-                res.send(err)
-            }else{
+        console.log(req.body)
+        Workout.findByIdAndUpdate(req.params.id,{$push:{exercises:req.body}},{new: true, runValidators: true})
+        .then((data)=>{
+                console.log(data)
                 res.json(data)
             }
-        });
+        ).catch(err=>{
+            console.log(err);
+            res.json(err);
+        })
     });
     app.post("/api/workouts", (req,res)=>{
         Workout.create({}).then(data=>{
